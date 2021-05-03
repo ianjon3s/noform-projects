@@ -1,0 +1,35 @@
+///* ========================================================================
+//   #GLOBAL
+//   ======================================================================== */
+// The global settings file contains any project-wide variables; things that
+// need to be made available to the entire codebase.
+
+// Site width
+$max-site-width: 2080px;
+
+// Breakpoints 
+$mobile:        360px;
+$mobile--wide:  480px;
+$tablet:        840px;
+$desktop:	    1000px;
+$wide:    	    1200px;
+$superwide:	    1500px;
+$sitemax:	    $max-site-width;
+
+// Form element heights
+$field-height-mobile: 34px;
+$field-height-desk: 40px;
+$field-height-large: 60px;
+
+// Standardise some UI treatments.
+$global-radius: 4px !default;
+$global-duration: 200ms;
+$global-transition-type: ease;
+$global-transition: all $global-duration $global-transition-type !default;
+
+// Max-width for text
+$global-text-max: 58ch;
+
+// Base font size
+$global-base-font-size: 16px;
+$global-base-line-height: 1.5;

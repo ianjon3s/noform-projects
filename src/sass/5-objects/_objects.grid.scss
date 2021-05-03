@@ -1,0 +1,17 @@
+/* ==========================================================================
+   #GRID
+   ========================================================================== */
+
+.o-grid {
+    @include o-wrapper;
+    display: grid;
+    grid-template-columns: repeat(12, [col] 1fr);
+    grid-template-rows: repeat(1, [row] auto);
+    grid-column-gap: 1rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    @include mq($from: tablet){
+        padding-top: 3vw;
+        padding-bottom: 3vw;
+    }
+}

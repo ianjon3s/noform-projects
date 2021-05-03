@@ -1,0 +1,25 @@
+/* ==========================================================================
+   #Fonts
+   ========================================================================== */
+
+
+// Font Face
+@mixin fonts {
+    font-family: 'Telegraf', helvetica, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased !important;
+    text-rendering: optimizeLegibility !important;
+}
+
+@mixin font-regular {
+    font-weight: 400;
+}
+
+@mixin font-bold {
+    font-weight: 700;
+}
+
+@mixin font-ultrabold {
+    font-weight: 800;
+}

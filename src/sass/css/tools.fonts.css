@@ -1,0 +1,30 @@
+/* ==========================================================================
+   #Fonts
+   ========================================================================== */
+.font-thin, .font-light, .font-reg, .font-med, .font-semi-bold, .font-bold {
+  font-family: 'Helvetica Neue', helvetica, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased !important;
+  text-rendering: optimizeLegibility !important; }
+
+.font-thin {
+  font-weight: 100; }
+
+.font-light {
+  font-weight: 300; }
+
+.font-reg {
+  font-weight: 400; }
+
+.font-med {
+  font-weight: 500; }
+
+.font-semi-bold {
+  font-weight: 600; }
+
+.font-bold {
+  font-weight: 700; }
+
+.font-italic {
+  font-style: italic; }

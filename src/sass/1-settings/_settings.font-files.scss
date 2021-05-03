@@ -1,0 +1,32 @@
+///* ========================================================================
+//   #FONT FILES
+//   ======================================================================== */
+
+// Add your font-face links to fonts here
+
+@font-face {
+    font-family: 'Telegraf';
+    src: url('../fonts/telegraf-regular.woff2') format('woff2'),
+         url('../fonts/telegraf-regular.woff') format('woff');
+    font-weight:  400;
+    font-style:   normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: 'Telegraf';
+    src: url('../fonts/telegraf-bold.woff2') format('woff2'),
+         url('../fonts/telegraf-bold.woff') format('woff');
+    font-weight:  700;
+    font-style:   normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: 'Telegraf';
+    src: url('../fonts/telegraf-ultrabold.woff2') format('woff2'),
+         url('../fonts/telegraf-ultrabold.woff') format('woff');
+    font-weight:  800;
+    font-style:   normal;
+    font-stretch: normal;
+}

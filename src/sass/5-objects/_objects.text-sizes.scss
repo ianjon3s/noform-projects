@@ -1,0 +1,58 @@
+///* ========================================================================
+//   #TEXT SIZES
+//   ======================================================================== */
+
+
+// Header font sizes
+
+@mixin font-size--header-lg {
+    font-size: 1.602em;
+}
+
+@mixin font-size--header-md {
+    font-size: 1.424em;
+}
+
+@mixin font-size--header-sm {
+    font-size: 1.266em;
+}
+
+
+// Body font sizes
+
+@mixin font-size--body-lg {
+    font-size: 1.125em;
+}
+
+@mixin font-size--body-md {
+    font-size: 1em;
+}
+
+@mixin font-size--body-sm {
+    font-size: 0.889em;
+}
+
+@mixin font-size--body-ty {
+    font-size: 0.79em;
+}
+
+
+
+h1,h2,h3,h4,h5,h6 {
+    line-height: 1.1;
+    margin: 0;
+    @include font-bold;
+}
+
+h1 {
+    @include font-size--header-md;
+}
+
+h2 {
+    @include font-size--header-lg;
+}
+
+h3,
+h4 {
+    @include font-size--header-sm;
+}

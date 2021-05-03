@@ -1,0 +1,28 @@
+# System files
+# ------------
+
+Icon
+.DS_Store
+
+# Lock files
+# ---------------
+.lock
+
+/assets
+
+/upgrade
+/cache
+/vendor
+/node_modules
+/coverage
+.idea
+.css.map
+.data
+.DS_Store
+.env
+.log
+.sass-cache
+.vagrant
+.vscode
+!/.vscode/launch.json
+yarn-error.log

@@ -1,0 +1,31 @@
+/* ==========================================================================
+   #PAGE
+   ========================================================================== */
+
+html {
+    font-size: $global-base-font-size;
+    line-height: $global-base-line-height;
+    min-height: 0vw; // Fix Safari font scaling bug
+    @include fonts;
+    color: $black;
+    height: 100%;
+    @include mq($from: mobile--wide){
+        font-size: 1.125em;
+    }
+    @include mq($from: desktop){
+        font-size: calc(18px + 6 * ((100vw - 1000px) / 1500));
+    }
+    @include mq($from: sitemax){
+        font-size: 1.395em;
+    }
+}
+
+body {
+    background: $black;
+    overflow-y: scroll;
+}
+
+.c-content {
+    background: $white;
+    overflow: hidden;
+}
