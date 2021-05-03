@@ -1,15 +1,6 @@
 const gulp       = require("gulp")
-const babel      = require("gulp-babel")
-const prettier   = require("@bdchauvette/gulp-prettier")
-const watch      = require('gulp-watch')
-const concat     = require('gulp-concat')
-const terser     = require('gulp-terser')
 const sass       = require('gulp-sass')
-const notify     = require('gulp-notify')
-const plumber    = require('gulp-plumber')
 const image      = require('gulp-image')
-const font       = require('gulp-font')
-const mode       = require('gulp-mode')()
 
 const paths = {
   src: {
@@ -32,29 +23,10 @@ const paths = {
 gulp.task('js:compress', () => {
   return gulp
     .src(paths.src.js)
-    .pipe(plumber())
-    .pipe(babel())
-    .pipe(terser())
-    .pipe(concat('all.js'))
     .pipe(gulp.dest(paths.build.js))
 });
 
-/**
- *
- */
-gulp.task("js:prettify", () => {
-  return gulp
-    .src(paths.src.js)
-    .pipe(plumber())
-    .pipe(
-      prettier({
-        singleQuote:   true,
-        trailingComma: "all",
-        insertPragma: true
-      })
-    )
-    .pipe(gulp.dest(file => file.base))
-});
+
 
 /**
  *
@@ -84,20 +56,8 @@ gulp.task('update:js', gulp.series('js:compress'));
  *
  */
 gulp.task('update:sass', () => {
-  var onError = function(err) {
-    notify.onError({
-            title:    "Gulp",
-            subtitle: "Failure!",
-            message:  "Error: <%= error.message %>",
-            sound:    "Beep"
-        })(err);
-
-        this.emit('end');
-    };
-
   return gulp
     .src(paths.src.sass)
-    .pipe(plumber({errorHandler: onError}))
     .pipe(
       sass({
         outputStyle: 'compressed'
