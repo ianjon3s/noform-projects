@@ -45,11 +45,11 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 h1 {
-    @include font-size--header-md;
+    @include font-size--header-lg;
 }
 
 h2 {
-    @include font-size--header-lg;
+    @include font-size--header-md;
 }
 
 h3,
