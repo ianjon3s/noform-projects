@@ -3,15 +3,44 @@
    ========================================================================== */
 
 .o-grid {
-    @include o-wrapper;
+    @include o-padding;
     display: grid;
     grid-template-columns: repeat(12, [col] 1fr);
     grid-template-rows: repeat(1, [row] auto);
     grid-column-gap: 1rem;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    @include mq($from: desktop){
+        grid-column-gap: 2rem;
+    }
+}
+
+.o-grid-col {
+    @include mq($until: desktop){
+        grid-column-start: col 1;
+        grid-column-end: span 12;
+    }
+}
+
+.o-grid-col--card {
+    grid-column-end: span 6;
+    &:nth-child(odd) {
+        grid-column-start: col 1;
+    }
+    &:nth-child(even) {
+        grid-column-start: col 7;
+    }
     @include mq($from: tablet){
-        padding-top: 3vw;
-        padding-bottom: 3vw;
+        grid-column-end: span 3;
+        &:nth-child(4n+1) {
+            grid-column-start: col 1;
+        }
+        &:nth-child(4n+2) {
+            grid-column-start: col 4;
+        }
+        &:nth-child(4n+3) {
+            grid-column-start: col 7;
+        }
+        &:nth-child(4n+4) {
+            grid-column-start: col 10;
+        }
     }
 }

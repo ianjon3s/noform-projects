@@ -40,16 +40,19 @@
 
 h1,h2,h3,h4,h5,h6 {
     line-height: 1.1;
-    margin: 0;
-    @include font-bold;
+    margin: 0 0 0.5em;
+    @include font-regular;
+    strong {
+        @include font-ultrabold;
+    }
 }
 
 h1 {
-    @include font-size--header-lg;
+    @include font-size--header-md;
 }
 
 h2 {
-    @include font-size--header-md;
+    @include font-size--header-sm;
 }
 
 h3,

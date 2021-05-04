@@ -15,12 +15,16 @@ html {
     @include mq($from: desktop){
         font-size: calc(18px + 6 * ((100vw - 1000px) / 1500));
     }
-    @include mq($from: sitemax){
-        font-size: 1.395em;
-    }
 }
 
 body {
     background: $white;
     overflow-y: scroll;
+}
+
+.c-content {
+    overflow: hidden;
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
 }

@@ -1,0 +1,262 @@
+/* ==========================================================================
+   #GENERATOR
+   ========================================================================== */
+
+
+$generator-col-1: #6AA3A5;
+$generator-col-2: #E7C6BF;
+$generator-col-3: #CD6C41;
+$generator-col-4: #545570;
+$generator-col-5: #D9DACF;
+$generator-col-6: #BBB09C;
+$generator-col-7: #67594D;
+$generator-col-8: #3E3832;
+$generator-col-9: #DCB05F;
+$generator-col-10: #99B7B7;
+
+$generator-col-bg: $generator-col-5;
+
+@mixin pseudo-absolute {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.p-generator {
+    .p-generator__wrapper {
+        width: 100%;
+        height: calc(100vh - 10px);
+        overflow-y: hidden;
+        position: relative;
+        padding: 10px;
+    }
+
+    .p-generator__grid {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        min-height: 100vh;
+        margin: 0 auto;
+        background-color: $generator-col-bg;
+        > div {
+            height: 0;
+            flex-basis: 10%;
+            padding-bottom: 10%;
+            position: relative;
+            &::after {
+                @include pseudo-absolute;
+            }
+            @media (min-height: 600px) {
+                flex-basis: 6.6666%;
+                padding-bottom: 6.6666%;
+            }
+            @media (min-height: 600px) and (max-width: 800px) {
+                flex-basis: 10%;
+                padding-bottom: 10%;
+            }
+            @media (min-height: 1000px) and (min-width: 1200px) {
+                flex-basis: 4%;
+                padding-bottom: 4%;
+            }
+            
+            &.grid_rotate {
+                &--0 {
+                    transform: rotate(0deg);
+                }
+                &--1 {
+                    transform: rotate(90deg);
+                }
+                &--2 {
+                    transform: rotate(180deg);
+                }
+                &--3 {
+                    transform: rotate(270deg);
+                }
+            }
+            &.grid_shape {
+                &--0 {
+                    background: $generator-col-5;
+                    &::after {
+                        background: linear-gradient(to bottom right, transparent 0%, transparent 50%, $generator-col-6 50%, $generator-col-6 100%);
+                    }
+                }
+                &--1 {
+                    background: $generator-col-4;
+                    &::after {
+                        background: linear-gradient(to bottom left, transparent 0%, transparent 50%, $generator-col-8 50%, $generator-col-8 100%);
+                    }
+                }
+                &--2 {
+                    background: $generator-col-2;
+                    &::after {
+                        background: linear-gradient(to bottom left, transparent 0%, transparent 50%, $generator-col-3 50%, $generator-col-3 100%);
+                    }
+                }
+                &--3 {
+                    background: $generator-col-5;
+                    &::after {
+                        width: 50%;
+                        background: $generator-col-3;
+                    }
+                }
+                &--4 {
+                    background: $generator-col-5;
+                    &::after {
+                        width: 50%;
+                        background: $generator-col-4;
+                    }
+                }
+                &--5 {
+                    background: $generator-col-7;
+                    &::after {
+                        width: 50%;
+                        background: $generator-col-8;
+                    }
+                }
+                &--6 {
+                    background: $generator-col-5;
+                    &::after {
+                        border-radius: 50%;
+                        background: $generator-col-6;
+                    }
+                }
+                &--7 {
+                    background: $generator-col-5;
+                    &::after {
+                        background: $generator-col-1;
+                        border-radius: 0 0 100% 0;
+                        -moz-border-radius: 0 0 100% 0;
+                        -webkit-border-radius: 0 0 100% 0;
+                    }
+                }
+                &--8 {
+                    background: $generator-col-5;
+                    &::after {
+                        background: $generator-col-4;
+                        border-radius: 0 0 100% 0;
+                        -moz-border-radius: 0 0 100% 0;
+                        -webkit-border-radius: 0 0 100% 0;
+                    }
+                }
+                &--9 {
+                    background: $generator-col-7;
+                    &::after {
+                        background: $generator-col-2;
+                        border-radius: 0 0 100% 0;
+                        -moz-border-radius: 0 0 100% 0;
+                        -webkit-border-radius: 0 0 100% 0;
+                    }
+                }
+                &--10 {
+                    background: $generator-col-8;
+                    &::after {
+                        background: $generator-col-6;
+                        border-radius: 0 0 100% 0;
+                        -moz-border-radius: 0 0 100% 0;
+                        -webkit-border-radius: 0 0 100% 0;
+                    }
+                }
+                &--11 {
+                    background: $generator-col-6;
+                    &::after {
+                        background: $generator-col-8;
+                        border-radius: 0 0 100% 0;
+                        -moz-border-radius: 0 0 100% 0;
+                        -webkit-border-radius: 0 0 100% 0;
+                    }
+                }
+                &--12 {
+                    background: $generator-col-7;
+                    &::after {
+                        background: $generator-col-6;
+                        border-radius: 0 0 100% 0;
+                        -moz-border-radius: 0 0 100% 0;
+                        -webkit-border-radius: 0 0 100% 0;
+                    }
+                }
+                &--13 {
+                    background: $generator-col-2;
+                    &::after {
+                        width: 50%;
+                        background: $generator-col-3;
+                    }
+                }
+            }
+            &.grid_col {
+                &--0 {
+                    background: $generator-col-10;
+                }
+                &--1 {
+                    background: $generator-col-1;
+                }
+                &--2 {
+                    background: $generator-col-2;
+                }
+                &--3 {
+                    background: $generator-col-3;
+                }
+                &--4 {
+                    background: $generator-col-4;
+                }
+                &--5 {
+                    background: $generator-col-5;
+                }
+                &--6 {
+                    background: $generator-col-6;
+                }
+                &--7 {
+                    background: $generator-col-7;
+                }
+                &--8 {
+                    background: $generator-col-8;
+                }
+                &--9 {
+                    background: $generator-col-9;
+                }
+            }
+        }
+    }
+    
+
+    .p-generator__control {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .p-generator__btn {
+        -webkit-user-select: none;
+        width: 5em;
+        margin: 0;
+        padding: 0.5em 1em;
+        font-size: 1.6em;
+        border: 3px solid $white;
+        position: relative;
+        background: $white;
+        cursor: pointer;
+        @include font-bold;
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            border: 3px solid $black;
+        }
+        &:active {
+            background-color: $link;
+            color: $white;
+        }
+    }
+}

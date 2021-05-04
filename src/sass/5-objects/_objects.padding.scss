@@ -1,0 +1,23 @@
+/* ==========================================================================
+   #PADDING
+   ========================================================================== */
+
+// Mixin for responsive inline padding
+
+
+@mixin o-padding {
+    padding: 1.5rem 1rem;
+    @include mq($from: mobile--wide){
+        padding: 2rem 1.5rem;
+    }
+    @include mq($from: tablet){
+        padding: 2.25rem;
+    }
+    @include mq($from: wide){
+        padding: 3rem;
+    }
+}
+
+.o-padding{
+    @include o-padding;
+}
