@@ -26,12 +26,22 @@ $generator-col-bg: $generator-col-5;
 }
 
 .p-generator {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    
     .p-generator__wrapper {
         width: 100%;
-        height: calc(100vh - 10px);
+        height: 100%;
         overflow-y: hidden;
         position: relative;
-        padding: 10px;
+        display: flex;
+        flex-direction: column;
     }
 
     .p-generator__grid {
@@ -39,7 +49,6 @@ $generator-col-bg: $generator-col-5;
         flex-direction: row;
         flex-wrap: wrap;
         width: 100%;
-        min-height: 100vh;
         margin: 0 auto;
         background-color: $generator-col-bg;
         > div {
@@ -227,7 +236,7 @@ $generator-col-bg: $generator-col-5;
         top: 0;
         left: 0;
         width: 100%;
-        height: 100vh;
+        height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -236,6 +245,7 @@ $generator-col-bg: $generator-col-5;
 
     .p-generator__btn {
         -webkit-user-select: none;
+        user-select: none;
         width: 5em;
         margin: 0;
         padding: 0.5em 1em;

@@ -20,6 +20,9 @@ html {
 body {
     background: $white;
     overflow-y: scroll;
+    &.state--dark-bg {
+        background: $black;
+    }
 }
 
 .c-content {
@@ -29,12 +32,22 @@ body {
     width: 100%;
 }
 
-.c-main {
+.u-fade-in-up {
+    -webkit-animation: fade-in-up 400ms ease-in 200ms both;
+    animation: fade-in-up 400ms ease-in 200ms both;
+}
+
+.u-fade-in {
     -webkit-animation: fade-in 400ms ease-in 200ms both;
     animation: fade-in 400ms ease-in 200ms both;
 }
 
-@-webkit-keyframes fade-in {
+.u-fade-in--fast {
+    -webkit-animation: fade-in 100ms ease-in 100ms both;
+    animation: fade-in 100ms ease-in 100ms both;
+}
+
+@-webkit-keyframes fade-in-up {
     0% {
         -webkit-transform: translateY(5px);
         transform: translateY(5px);
@@ -48,7 +61,7 @@ body {
     }
 }
 
-@keyframes fade-in {
+@keyframes fade-in-up {
     0% {
         -webkit-transform: translateY(5px);
         transform: translateY(5px);
@@ -58,6 +71,26 @@ body {
     100% {
         -webkit-transform: translateY(0);
         transform: translateY(0);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fade-in {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0
+    }
+
+    100% {
         opacity: 1
     }
 }
