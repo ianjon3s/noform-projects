@@ -28,3 +28,36 @@ body {
     min-height: 100vh;
     width: 100%;
 }
+
+.c-main {
+    -webkit-animation: fade-in 400ms ease-in 200ms both;
+    animation: fade-in 400ms ease-in 200ms both;
+}
+
+@-webkit-keyframes fade-in {
+    0% {
+        -webkit-transform: translateY(5px);
+        transform: translateY(5px);
+        opacity: 0
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        -webkit-transform: translateY(5px);
+        transform: translateY(5px);
+        opacity: 0
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1
+    }
+}

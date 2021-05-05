@@ -15,6 +15,9 @@
             .c-card__title {
                 background-size: 100% 100%;
             }
+            .c-card__img img {
+                opacity: 1;
+            }
         }
     }
 
@@ -22,6 +25,15 @@
     .c-card__img img {
         width: 100%;
         height: auto;
+    }
+
+    .c-card__img {
+        background: $black;
+    }
+
+    .c-card__img img {
+        opacity: 0.85;
+        transition: opacity $global-transition-duration $global-transition-type;
     }
     
     .c-card__content {

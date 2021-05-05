@@ -14,7 +14,7 @@ p {
 a {
     color: inherit;
     text-decoration: underline;
-    transition: background-color $global-transition-duration $global-transition-type, color $global-transition-duration $global-transition-type;
+    transition: background-color $global-transition-duration $global-transition-type, color $global-transition-duration $global-transition-type, border-color $global-transition-duration $global-transition-type;
 }
 a :-moz-any-link:focus { outline: none;}
 

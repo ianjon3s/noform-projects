@@ -1,0 +1,50 @@
+/* ==========================================================================
+   #INPUT GROUP
+   ========================================================================== */
+
+
+.o-input-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0.25em;
+}
+
+.o-input-group__item {
+    padding: 0.25em;
+    
+    // Hide default input
+    input {
+        z-index: -1;
+        position: absolute;
+        opacity: 0;
+    }
+
+    // Styling for label wrapper
+    label {
+        border: 2px solid $link;
+        border-radius: 4px;
+        background-color: transparent;
+        cursor: pointer;
+        max-width: 100%;
+        padding: 0.3em 0.5em;
+        position: relative;
+        display: block;
+        @include font-bold;
+        @include font-size--body-md;
+    }
+
+    // Styling for label wrapper when input is selected
+    input:checked ~ label {
+        background-color: $link;
+        color: $white;
+        border: 2px solid $link;
+    }
+
+    // Set focus style
+    input:focus ~ label {
+        border-color: lighten($highlight, 5%);
+    }
+}
