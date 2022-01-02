@@ -3,27 +3,14 @@
     "node": "14.x"
   },
   "dependencies": {
-    "@babel/core": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
-    "@babel/register": "^7.5.5",
-    "gulp": "^4.0.2",
-    "gulp-babel": "^8.0.0",
-    "gulp-notify": "^3.2.0",
-    "gulp-terser": "^1.2.0"
+    "gulp": "^4.0.2"
   },
   "license": "UNLICENSED",
   "devDependencies": {
-    "@bdchauvette/gulp-prettier": "^2.0.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-font": "^1.0.4",
-    "gulp-if": "3.0.0",
     "gulp-image": "^4.1.0",
-    "gulp-mode": "^1.0.2",
     "gulp-plumber": "^1.1.0",
     "gulp-sass": "^3.1.0",
-    "gulp-uglify-es": "^1.0.4",
-    "gulp-watch": "^4.3.11",
-    "prettier": "^1.8.2"
+    "gulp-watch": "^4.3.11"
   },
   "scripts": {
     "build": "gulp build"

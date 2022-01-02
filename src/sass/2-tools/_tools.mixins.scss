@@ -2,3 +2,19 @@
 //   #CUSTOM MIXINS
 //   ======================================================================== */
 
+// Mixin to add animated link underline
+
+@mixin link-underline($color:$link) {
+    text-decoration: none;
+    background-image: linear-gradient($color, $color);
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 18%;
+    transition: background-size $global-transition-duration $global-transition-type;
+    padding-bottom: 0.1em;
+    display: inline;
+    &:hover, 
+    &:focus {
+        background-size: 100% 100%;
+    }
+}

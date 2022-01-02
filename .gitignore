@@ -9,6 +9,7 @@ Icon
 .lock
 
 /assets
+/public/assets
 
 /upgrade
 /cache

@@ -16,16 +16,10 @@ $wide:    	    1200px;
 $superwide:	    1500px;
 $sitemax:	    $max-site-width;
 
-// Form element heights
-$field-height-mobile: 34px;
-$field-height-desk: 40px;
-$field-height-large: 60px;
-
-// Standardise some UI treatments.
-$global-radius: 4px !default;
-$global-duration: 200ms;
-$global-transition-type: ease;
-$global-transition: all $global-duration $global-transition-type !default;
+// Transitions
+$global-transition-duration: 100ms;
+$global-transition-type: ease-in-out;
+$global-transition: all $global-transition-duration $global-transition-type !default;
 
 // Max-width for text
 $global-text-max: 58ch;

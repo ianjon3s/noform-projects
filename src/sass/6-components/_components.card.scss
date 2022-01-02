@@ -1,0 +1,49 @@
+/* ==========================================================================
+   #CARD
+   ========================================================================== */
+
+.c-card-grid {
+    max-width: 2000px;
+}
+
+
+.c-card {
+    margin-bottom: 2rem;
+    .c-card__link {
+        text-decoration: none;
+        &:hover {
+            .c-card__title {
+                background-size: 100% 100%;
+            }
+            .c-card__img img {
+                opacity: 1;
+            }
+        }
+    }
+
+    .c-card__img,
+    .c-card__img img {
+        width: 100%;
+        height: auto;
+    }
+
+    .c-card__img {
+        background: $black;
+    }
+
+    .c-card__img img {
+        opacity: 0.85;
+        transition: opacity $global-transition-duration $global-transition-type;
+    }
+    
+    .c-card__content {
+        text-align: center;
+        padding: 0.5em 0;
+    }
+
+    .c-card__title {
+        @include font-size--body-lg;
+        @include link-underline($highlight);
+        @include font-bold;
+    }
+}

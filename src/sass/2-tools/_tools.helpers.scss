@@ -133,7 +133,7 @@
 
 // Mixin to create transitions
 
-@mixin transition($prop:all, $dur:$global-duration, $type:$global-transition-type) {
+@mixin transition($prop:all, $dur:$global-transition-duration, $type:$global-transition-type) {
     -webkit-transition: $prop $dur $type;
     -moz-transition: $prop $dur $type;
     -ms-transition: $prop $dur $type;

@@ -10,10 +10,10 @@ const paths = {
     sass:   "src/sass/**/*.+(sass|scss)"
   },
   build: {
-    js:     "assets/js/",
-    images: "assets/images/",
-    fonts:  "assets/fonts/",
-    sass:   "assets/css/"
+    js:     "public/assets/js/",
+    images: "public/assets/images/",
+    fonts:  "public/assets/fonts/",
+    sass:   "public/assets/css/"
   }
 };
 

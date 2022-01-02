@@ -15,12 +15,82 @@ html {
     @include mq($from: desktop){
         font-size: calc(18px + 6 * ((100vw - 1000px) / 1500));
     }
-    @include mq($from: sitemax){
-        font-size: 1.395em;
-    }
 }
 
 body {
     background: $white;
     overflow-y: scroll;
+    &.state--dark-bg {
+        background: $black;
+    }
+}
+
+.c-content {
+    overflow: hidden;
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.u-fade-in-up {
+    -webkit-animation: fade-in-up 400ms ease-in 200ms both;
+    animation: fade-in-up 400ms ease-in 200ms both;
+}
+
+.u-fade-in {
+    -webkit-animation: fade-in 400ms ease-in 200ms both;
+    animation: fade-in 400ms ease-in 200ms both;
+}
+
+.u-fade-in--fast {
+    -webkit-animation: fade-in 100ms ease-in 100ms both;
+    animation: fade-in 100ms ease-in 100ms both;
+}
+
+@-webkit-keyframes fade-in-up {
+    0% {
+        -webkit-transform: translateY(5px);
+        transform: translateY(5px);
+        opacity: 0
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1
+    }
+}
+
+@keyframes fade-in-up {
+    0% {
+        -webkit-transform: translateY(5px);
+        transform: translateY(5px);
+        opacity: 0
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fade-in {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
 }

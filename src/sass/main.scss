@@ -29,16 +29,26 @@
 
 //
 // Objects --- Objects and abstractions.
-@import "5-objects/objects.wrapper";             //  Page-level constraining and wrapping elements.
-@import "5-objects/objects.grid";                //  Initiate grid
+@import "5-objects/objects.padding";             //  Responsive inline padding
+@import "5-objects/objects.grid"; 
 @import "5-objects/objects.text-sizes";
-
+@import "5-objects/objects.grain";
+@import "5-objects/objects.input-group";
 
 //
 // Components --- Your designed UI elements
-@import "6-components/components.default";
+@import "6-components/components.header";
+@import "6-components/components.card";
+@import "6-components/components.back";
 
 
 //
+// Projects
+@import "7-projects/projects.tusi";
+@import "7-projects/projects.generator";
+@import "7-projects/projects.moire";
+@import "7-projects/projects.name2gradient";
+
+//
 // Utilities --- Overrides and helper classes.
-@import "7-utilities/utilities.hide";            //  Hide only visually, but have it available for screen readers.
+@import "8-utilities/utilities.hide";            //  Hide only visually, but have it available for screen readers.

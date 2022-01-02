@@ -1,0 +1,307 @@
+/* ==========================================================================
+   #TUSI COUPLE
+   ========================================================================== */
+
+.p-tusi {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #171717;
+
+    .p-tusi__wrap {
+        width: 100%;
+        max-width: 400px;
+        position: relative;
+        height: 100%;
+        padding: 25px 25px 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .p-tusi__circle {
+        position: relative;
+        width: 100%;
+        height: 0;
+        background: #FF906B;
+        border-radius: 50%;
+        padding-bottom: 100%;
+        margin-top: auto;
+    }
+
+    .p-tusi__lines {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .p-tusi__nodes {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.p-tusi-ui {
+    margin-top: auto;
+    color: $white;
+    text-align: center;
+    #p-tusi-ui__title {
+        @include font-size--body-lg;
+        margin: 0 0 0.2em;
+    }
+}
+
+.p-tusi-line {
+    width: 100%;
+    height: 2px;
+    background: rgba(23, 23, 23, 0.5);
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    top: calc(50% - 1px);
+    z-index: 0;
+    -webkit-animation: fadeIn50 800ms ease-in forwards;
+    animation: fadeIn50 800ms ease-in forwards;
+}
+
+.p-tusi-node-span {
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    left: 0;
+    top: calc(50% - 7px);
+    background: #fff;
+    border-radius: 50%;
+    z-index: 100;
+    -webkit-animation: slide 4800ms ease-in-out infinite;
+    animation: slide 4800ms ease-in-out infinite;
+    #tusi[data-animation-type="ease"] & {
+        animation-timing-function: ease;
+    }
+    #tusi[data-animation-type="ease-in"] & {
+        animation-timing-function: ease-in;
+    }
+    #tusi[data-animation-type="ease-out"] & {
+        animation-timing-function: ease-out;
+    }
+    #tusi[data-animation-type="ease-in-out"] & {
+        animation-timing-function: ease-in-out;
+    }
+    #tusi[data-animation-type="linear"] & {
+        animation-timing-function: linear;
+    }
+}
+
+.p-tusi-line:nth-child(1) {
+    transform: rotate(180deg)
+}
+
+.p-tusi-line:nth-child(2) {
+    transform: rotate(202.5deg)
+}
+
+.p-tusi-line:nth-child(3) {
+    transform: rotate(225deg)
+}
+
+.p-tusi-line:nth-child(4) {
+    transform: rotate(247.5deg)
+}
+
+.p-tusi-line:nth-child(5) {
+    transform: rotate(270deg)
+}
+
+.p-tusi-line:nth-child(6) {
+    transform: rotate(292.5deg)
+}
+
+.p-tusi-line:nth-child(7) {
+    transform: rotate(315deg)
+}
+
+.p-tusi-line:nth-child(8) {
+    transform: rotate(337.5deg)
+}
+
+.p-tusi-node{
+    opacity: 0;
+    -webkit-animation: fadeIn100 800ms ease-in forwards;
+    animation: fadeIn100 800ms ease-in forwards
+}
+
+.p-tusi-node:nth-child(1) {
+    transform: rotate(180deg)
+}
+
+.p-tusi-node:nth-child(1) .p-tusi-node-span {
+    animation-delay: 600ms
+}
+
+.p-tusi-node:nth-child(2) {
+    transform: rotate(202.5deg)
+}
+
+.p-tusi-node:nth-child(2) .p-tusi-node-span {
+    animation-delay: 900ms
+}
+
+.p-tusi-node:nth-child(3) {
+    transform: rotate(225deg)
+}
+
+.p-tusi-node:nth-child(3) .p-tusi-node-span {
+    animation-delay: 1200ms
+}
+
+.p-tusi-node:nth-child(4) {
+    transform: rotate(247.5deg)
+}
+
+.p-tusi-node:nth-child(4) .p-tusi-node-span {
+    animation-delay: 1500ms
+}
+
+.p-tusi-node:nth-child(5) {
+    transform: rotate(270deg)
+}
+
+.p-tusi-node:nth-child(5) .p-tusi-node-span {
+    animation-delay: 1800ms
+}
+
+.p-tusi-node:nth-child(6) {
+    transform: rotate(292.5deg)
+}
+
+.p-tusi-node:nth-child(6) .p-tusi-node-span {
+    animation-delay: 2100ms
+}
+
+.p-tusi-node:nth-child(7) {
+    transform: rotate(315deg)
+}
+
+.p-tusi-node:nth-child(7) .p-tusi-node-span {
+    animation-delay: 2400ms
+}
+
+.p-tusi-node:nth-child(8) {
+    transform: rotate(337.5deg)
+}
+
+.p-tusi-node:nth-child(8) .p-tusi-node-span {
+    animation-delay: 2700ms
+}
+
+.p-tusi-line:nth-child(1),
+.p-tusi-node:nth-child(1) {
+    animation-delay: 300ms
+}
+
+.p-tusi-line:nth-child(5),
+.p-tusi-node:nth-child(5) {
+    animation-delay: 3000ms
+}
+
+.p-tusi-line:nth-child(7),
+.p-tusi-node:nth-child(7) {
+    animation-delay: 6000ms
+}
+
+.p-tusi-line:nth-child(3),
+.p-tusi-node:nth-child(3) {
+    animation-delay: 7000ms
+}
+
+.p-tusi-line:nth-child(2),
+.p-tusi-node:nth-child(2) {
+    animation-delay: 10000ms
+}
+
+.p-tusi-line:nth-child(6),
+.p-tusi-node:nth-child(6) {
+    animation-delay: 11500ms
+}
+
+.p-tusi-line:nth-child(4),
+.p-tusi-node:nth-child(4) {
+    animation-delay: 13000ms
+}
+
+.p-tusi-line:nth-child(8),
+.p-tusi-node:nth-child(8) {
+    animation-delay: 14500ms
+}
+
+@-webkit-keyframes slide {
+    0% {
+        left: 0
+    }
+
+    50% {
+        left: calc(100% - 14px)
+    }
+}
+
+@keyframes slide {
+    0% {
+        left: 0
+    }
+
+    50% {
+        left: calc(100% - 14px)
+    }
+}
+
+@-webkit-keyframes fadeIn50 {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 0.2
+    }
+}
+
+@keyframes fadeIn50 {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 0.2
+    }
+}
+
+@-webkit-keyframes fadeIn100 {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes fadeIn100 {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}

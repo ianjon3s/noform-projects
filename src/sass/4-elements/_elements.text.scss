@@ -14,7 +14,7 @@ p {
 a {
     color: inherit;
     text-decoration: underline;
-    @include transition;
+    transition: background-color $global-transition-duration $global-transition-type, color $global-transition-duration $global-transition-type, border-color $global-transition-duration $global-transition-type;
 }
 a :-moz-any-link:focus { outline: none;}
 
@@ -145,10 +145,10 @@ figcaption {
 }
 
 ::-moz-selection {
-    background: chocolate;
+    background: $highlight;
     color: $black;
 }
 ::selection {
-    background: chocolate;
+    background: $highlight;
     color: $black;
 }

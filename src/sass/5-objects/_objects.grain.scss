@@ -1,0 +1,138 @@
+/* ==========================================================================
+   #GRAIN
+   ========================================================================== */
+
+
+.o-grain {
+    @include vendor(user-select, none);
+    pointer-events: none;
+    background-image: url('../images/grain.png');
+    background-repeat: repeat;
+    position: absolute;
+    height: 500%;
+    width: 500%;
+    top: -200%;
+    left: -200%;
+    opacity: 0.05;
+    z-index: 1000;
+    -webkit-animation: shift 10s steps(10) infinite;
+    animation: shift 10s steps(10) infinite;
+    will-change: transform;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    @include mq($from: tablet){
+        height: 300%;
+        width: 300%;
+        top: -100%;
+        left: -100%;
+    }
+}
+
+@-webkit-keyframes shift {
+
+    0%,
+    to {
+        -webkit-transform: translate(0);
+        transform: translate(0)
+    }
+
+    10% {
+        -webkit-transform: translate(-444px, -222px);
+        transform: translate(-444px, -222px)
+    }
+
+    20% {
+        -webkit-transform: translate(88px, -66px);
+        transform: translate(88px, -66px)
+    }
+
+    30% {
+        -webkit-transform: translate(-321px, 222px);
+        transform: translate(-321px, 222px)
+    }
+
+    40% {
+        -webkit-transform: translate(11px, -333px);
+        transform: translate(11px, -333px)
+    }
+
+    50% {
+        -webkit-transform: translate(-222px, 123px);
+        transform: translate(-222px, 123px)
+    }
+
+    60% {
+        -webkit-transform: translate(44px, -288px);
+        transform: translate(44px, -288px)
+    }
+
+    70% {
+        -webkit-transform: translate(288px, 80px);
+        transform: translate(288px, 80px)
+    }
+
+    80% {
+        -webkit-transform: translate(-55px, -199px);
+        transform: translate(-55px, -199px)
+    }
+
+    90% {
+        -webkit-transform: translate(444px, 199px);
+        transform: translate(444px, 199px)
+    }
+}
+
+@keyframes shift {
+
+    0%,
+    to {
+        -webkit-transform: translate(0);
+        transform: translate(0)
+    }
+
+    10% {
+        -webkit-transform: translate(-444px, -222px);
+        transform: translate(-444px, -222px)
+    }
+
+    20% {
+        -webkit-transform: translate(88px, -66px);
+        transform: translate(88px, -66px)
+    }
+
+    30% {
+        -webkit-transform: translate(-321px, 222px);
+        transform: translate(-321px, 222px)
+    }
+
+    40% {
+        -webkit-transform: translate(11px, -333px);
+        transform: translate(11px, -333px)
+    }
+
+    50% {
+        -webkit-transform: translate(-222px, 123px);
+        transform: translate(-222px, 123px)
+    }
+
+    60% {
+        -webkit-transform: translate(44px, -288px);
+        transform: translate(44px, -288px)
+    }
+
+    70% {
+        -webkit-transform: translate(288px, 80px);
+        transform: translate(288px, 80px)
+    }
+
+    80% {
+        -webkit-transform: translate(-55px, -199px);
+        transform: translate(-55px, -199px)
+    }
+
+    90% {
+        -webkit-transform: translate(444px, 199px);
+        transform: translate(444px, 199px)
+    }
+}

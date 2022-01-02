@@ -1,0 +1,77 @@
+/* ==========================================================================
+   #NAME2GRADIENT
+   ========================================================================== */
+
+.p-n2g {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: $white;
+    
+    .p-n2g__ui {
+        background: rgba($off-white, 0.7);
+        width: 90%;
+        max-width: 340px;
+    }
+
+    .p-n2g__header {
+        background: $black;
+        color: $white;
+        width: 100%;
+        padding: 0.5em;
+        text-align: center;
+        margin: 0;
+        @include font-size--header-sm;
+        @include font-ultrabold;
+    }
+
+    .p-n2g__string {
+        display: none;
+        position: absolute;
+        bottom: 17px;
+        padding: 0.5em 1em;
+        background: $black;
+        color: $white;
+        @include font-bold;
+        letter-spacing: 0.05em;
+        border-radius: 20px;
+        font-size: 0.875em;
+        text-transform: uppercase;
+        line-height: 1;
+        margin: 0;
+        &--first {
+            left: 14px;
+        }
+        &--last {
+            right: 14px;
+        }
+    }
+}
+
+.p-n2g-form {
+    padding: 0.5em 0.75em;
+    
+
+    .p-n2g-form__group {
+        padding: 0.25em 0 0.5em;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .p-n2g-form__label {
+        @include font-size--body-sm;
+        @include font-bold;
+    }
+
+    .p-n2g-form__input {
+        @include font-size--body-md;
+        padding: 0.5em;
+    }
+}
