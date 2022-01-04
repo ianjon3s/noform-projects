@@ -1,0 +1,99 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>audio interface</title>
+    <meta name="description" content="audio-interface –– noform projects">
+    <meta name="author" content="Ian Jones">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="../assets/images/favicons/site.webmanifest">
+    <link rel="mask-icon" href="../assets/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="../assets/css/main.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body class="state--dark-bg">
+
+<section class="c-back u-fade-in--fast">
+	<a class="c-back__btn" href="../">⤌ back to index</a>
+</section>
+
+<main class="p-audio u-fade-in">
+    <div class="p-audio__cable"></div>
+    <section class="p-audio__wrapper">
+        
+        <section class="p-audio__shim"></section>
+        <section class="p-audio__jack"></section>
+        <section class="p-audio__shim"></section>
+    
+        <section class="p-audio__interface" id="interface">
+            <section class="p-audio__controls">
+                <div class="audio-control">
+                    <div class="dial">
+                        <span class="knob"></span>
+                    </div>
+                    <div class="label"></div>
+                </div>
+                <div class="audio-control">
+                    <div class="dial">
+                        <span class="knob"></span>
+                    </div>
+                    <div class="label"></div>
+                </div>
+                <div class="audio-control">
+                    <div class="dial">
+                        <span class="knob"></span>
+                    </div>
+                    <div class="label"></div>
+                </div>
+                <div class="audio-control">
+                    <div class="dial">
+                        <span class="knob"></span>
+                    </div>
+                    <div class="label"></div>
+                </div>
+                <div class="audio-control">
+                    <div class="dial">
+                        <span class="knob"></span>
+                    </div>
+                    <div class="label"></div>
+                </div>
+            </section>
+            <section class="p-audio__nameplate">
+                <h1 id="nameplate"></h1>
+            </section>
+
+        </section>
+
+        <section class="p-audio__shim"></section>
+        <section class="p-audio__jack"></section>
+        <section class="p-audio__shim"></section>
+    </section>
+
+    
+
+    <section class="p-audio__info">
+        <button onClick="window.location.reload();">refresh interface</button>
+        <p>uses the <a href="https://random-word-api.herokuapp.com/home">Random Word API</a></p>
+    </section>
+</main>
+
+<script src="../assets/js/jquery-3.6.0.min.js"></script>
+<script src="../assets/js/audio-interface.js"></script>
+
+
+</body>
+</html>
