@@ -57,65 +57,108 @@ function shuffle(array) {
 }
 
 LabelArray = new Array();
-LabelArray[0] = 'Parse';
-LabelArray[1] = 'Length';
-LabelArray[2] = 'Rate';
-LabelArray[3] = 'Strength';
-LabelArray[4] = 'Intensity';
-LabelArray[5] = 'Decay';
-LabelArray[6] = 'Blend';
-LabelArray[7] = 'Gain';
-LabelArray[8] = 'Boost';
-LabelArray[9] = 'Tone';
-LabelArray[10] = 'Cut';
-LabelArray[11] = 'Squash';
-LabelArray[12] = 'Enhance';
-LabelArray[13] = 'Treble';
-LabelArray[14] = 'Bass';
-LabelArray[15] = 'Middle';
-LabelArray[16] = 'Presence';
-LabelArray[17] = 'Distort';
-LabelArray[18] = 'Merge';
-LabelArray[19] = 'Speed';
-LabelArray[20] = 'Push';
-LabelArray[21] = 'Pull';
-LabelArray[22] = 'Mirror';
-LabelArray[23] = 'Reverse';
-LabelArray[24] = 'Flatten';
-LabelArray[25] = 'Sharpen';
-LabelArray[26] = 'Crush';
-LabelArray[27] = 'Decist';
-LabelArray[28] = 'Persist';
-LabelArray[29] = 'Advance';
-LabelArray[30] = 'Retreat';
-LabelArray[31] = 'Stretch';
-LabelArray[32] = 'Fiddle';
-LabelArray[33] = 'Skew';
-LabelArray[34] = 'Rotate';
-LabelArray[35] = 'Volume';
-LabelArray[36] = 'Attack';
-LabelArray[37] = 'Morph';
-LabelArray[38] = 'Lift';
-LabelArray[39] = 'Expand';
-LabelArray[40] = 'Delay';
-LabelArray[41] = 'Compress';
-LabelArray[42] = 'Limit';
+LabelArray[0] = 'parse';
+LabelArray[1] = 'length';
+LabelArray[2] = 'rate';
+LabelArray[3] = 'strength';
+LabelArray[4] = 'intensity';
+LabelArray[5] = 'decay';
+LabelArray[6] = 'blend';
+LabelArray[7] = 'gain';
+LabelArray[8] = 'boost';
+LabelArray[9] = 'tone';
+LabelArray[10] = 'cut';
+LabelArray[11] = 'squash';
+LabelArray[12] = 'enhance';
+LabelArray[13] = 'treble';
+LabelArray[14] = 'bass';
+LabelArray[15] = 'middle';
+LabelArray[16] = 'presence';
+LabelArray[17] = 'distort';
+LabelArray[18] = 'merge';
+LabelArray[19] = 'speed';
+LabelArray[20] = 'push';
+LabelArray[21] = 'pull';
+LabelArray[22] = 'mirror';
+LabelArray[23] = 'reverse';
+LabelArray[24] = 'flatten';
+LabelArray[25] = 'sharpen';
+LabelArray[26] = 'crush';
+LabelArray[27] = 'decist';
+LabelArray[28] = 'persist';
+LabelArray[29] = 'advance';
+LabelArray[30] = 'retreat';
+LabelArray[31] = 'stretch';
+LabelArray[32] = 'fiddle';
+LabelArray[33] = 'skew';
+LabelArray[34] = 'rotate';
+LabelArray[35] = 'volume';
+LabelArray[36] = 'attack';
+LabelArray[37] = 'morph';
+LabelArray[38] = 'lift';
+LabelArray[39] = 'expand';
+LabelArray[40] = 'delay';
+LabelArray[41] = 'compress';
+LabelArray[42] = 'limit';
+LabelArray[43] = 'spread';
+LabelArray[44] = 'envelope';
+LabelArray[45] = 'velocity';
+LabelArray[46] = 'noise';
+LabelArray[47] = 'drift';
+LabelArray[48] = 'inflate';
+LabelArray[49] = 'inflame';
+LabelArray[50] = 'randomise';
+LabelArray[51] = 'repeat';
+LabelArray[52] = 'frequency';
+LabelArray[53] = 'dry/wet';
+LabelArray[54] = 'mix';
+LabelArray[55] = 'fade';
+LabelArray[56] = 'calibrate';
+LabelArray[57] = 'tune';
+LabelArray[58] = 'transpose';
+LabelArray[59] = 'width';
+LabelArray[60] = 'distance';
+LabelArray[61] = 'sensitivity';
+LabelArray[62] = 'range';
+LabelArray[63] = 'drive';
+LabelArray[64] = 'feedback';
+LabelArray[65] = 'tempo';
+LabelArray[66] = 'output';
+LabelArray[67] = 'gate';
+LabelArray[68] = 'time';
+LabelArray[69] = 'sync';
+LabelArray[70] = 'mode';
+LabelArray[71] = 'saturate';
+LabelArray[72] = 'high pass';
+LabelArray[73] = 'low pass';
+LabelArray[74] = 'brightness';
+LabelArray[75] = 'pan';
+LabelArray[76] = 'position';
+LabelArray[77] = 'release';
+LabelArray[78] = 'reverb';
+LabelArray[79] = 'echo';
 
-// Create number for control rotation
-var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
-var shuffled = shuffle(arr);
+// Create number for knob rotation
+var rotateArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+var rotateShuffled = shuffle(rotateArr);
+
+// Create numbers to dictate control type
+var controlArr = [1, 2, 3, 4, 5, 6];
+var controlShuffled = shuffle(controlArr);
 
 $('.audio-control').each(function(i) {
     
     var innerLabel = $(this).find(".label");
     var innerDial = $(this).find(".knob");
+    var control = $(this);
     
     function getRandomLabel() {
-        var num = Math.floor( Math.random() * 43);
+        var num = Math.floor( Math.random() * 80);
         var label = LabelArray[num];
         innerLabel.html(label);
     }
     getRandomLabel()
 
-    innerDial.addClass( 'rotate--' + shuffled[i] );
+    innerDial.addClass( 'rotate--' + rotateShuffled[i] );
+    control.addClass( 'control--' + controlShuffled[i] );
 });
