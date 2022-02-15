@@ -1,0 +1,193 @@
+/* ==========================================================================
+   #HELIX SPINNER
+   ========================================================================== */
+
+.p-helix {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #171717;
+}
+
+.p-helix__wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    .arm {
+        width: 500px;
+        height: 2px;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(white, 0.25);
+        }
+    }
+
+    .arm--1 {
+        position: relative;
+    }
+
+    .arm--2 {
+        position: absolute;
+        right: -250px;
+        &::before {
+            left: 50%;
+            width: 50%;
+        }
+    }
+
+    .arm--3 {
+        position: absolute;
+        left: -250px;
+        &::before {
+            width: 50%;
+        }
+    }
+
+    .arm--4 {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+.p-helix__info {
+    position: fixed;
+    bottom: 5%;
+    left: 0;
+    width: 100%;
+    color: $white;
+    z-index: 15;
+    text-align: center;
+    button {
+        cursor: pointer;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        border: none;
+        @include font-bold;
+        padding: 0.5em 0.75em;
+        margin-bottom: 1em;
+        border-radius: 4px;
+        min-width: 220px;
+        background-color: darken($link, 20%);
+        color: $white;
+        transition: background-color $global-transition-duration $global-transition-type;
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: darken($link, 30%);
+        }
+    }
+    p a {
+        @include link-underline;
+    }
+}
+
+
+.u-spin {
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 200s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-name: spin;
+    -moz-animation-duration: 200s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: ease-in-out;
+    -ms-animation-name: spin;
+    -ms-animation-duration: 200s;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: ease-in-out;
+    animation-name: spin;
+    animation-duration: 200s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+
+    body.state--animation-paused & {
+        animation-play-state: paused;
+    }
+}
+
+.u-spin--reverse {
+    -webkit-animation-name: spin--reverse;
+    -moz-animation-name: spin--reverse;
+    -ms-animation-name: spin--reverse;
+    animation-name: spin--reverse;
+}
+
+#helix[data-animation-type="chaos"] {
+    .u-spin--speed-0 {
+        animation-duration: 200s;
+    }
+    .u-spin--speed-1 {
+        animation-duration: 199s;
+    }
+    .u-spin--speed-2 {
+        animation-duration: 198s;
+    }
+    .u-spin--speed-3 {
+        animation-duration: 197s;
+    }
+    .u-spin--speed-4 {
+        animation-duration: 196s;
+    }
+    .u-spin--speed-5 {
+        animation-duration: 195s;
+    }
+    .u-spin--speed-6 {
+        animation-duration: 194s;
+    }
+    .u-spin--speed-7 {
+        animation-duration: 193s;
+    }
+    .u-spin--speed-8 {
+        animation-duration: 192s;
+    }
+    .u-spin--speed-9 {
+        animation-duration: 191s;
+    }
+}
+
+
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(270deg); }
+    to { -moz-transform: rotate(-270deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(270deg); }
+    to { -webkit-transform: rotate(-270deg); }
+}
+@keyframes spin {
+    from {transform:rotate(270deg);}
+    to {transform:rotate(-270deg);}
+}
+
+
+
+@-moz-keyframes spin--reverse {
+    from { -moz-transform: rotate(270deg); }
+    to { -moz-transform: rotate(-270deg); }
+}
+@-webkit-keyframes spin--reverse {
+    from { -webkit-transform: rotate(270deg); }
+    to { -webkit-transform: rotate(-270deg); }
+}
+@keyframes spin--reverse {
+    from {transform:rotate(270deg);}
+    to {transform:rotate(-270deg);}
+}
