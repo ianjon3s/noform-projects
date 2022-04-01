@@ -1,0 +1,125 @@
+/* ==========================================================================
+   #WAVE MACHINE
+   ========================================================================== */
+
+.p-wave {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #171717;
+
+    .p-wave__wrap {
+        width: 100%;
+        max-width: 500px;
+        position: relative;
+        height: 100%;
+        padding: 25px 25px 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
+.p-wave-machine {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 50%;
+    margin-top: auto;
+
+    .p-wave-machine__wrap {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .p-wave-machine__line {
+        position: relative;
+        width: 1px;
+        height: 100%;
+        background: rgba($white, 0.15);
+    }
+
+    .p-wave-machine__node {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: translate(-4px, 4px);
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: #f3c4b1;
+        -webkit-animation: wave 2400ms ease-in-out infinite;
+        animation: wave 2400ms ease-in-out infinite;
+        #wave[data-animation-type="ease"] & {
+            animation-timing-function: ease;
+        }
+        #wave[data-animation-type="ease-in"] & {
+            animation-timing-function: ease-in;
+        }
+        #wave[data-animation-type="ease-out"] & {
+            animation-timing-function: ease-out;
+        }
+        #wave[data-animation-type="ease-in-out"] & {
+            animation-timing-function: ease-in-out;
+        }
+        #wave[data-animation-type="linear"] & {
+            animation-timing-function: linear;
+        }
+    }
+    
+}
+
+// Generate animation delays to form wave
+
+@for $i from 1 through 24 {
+    &:nth-child(#{$i}) > .p-wave-machine__node {
+        animation-delay: $i * (50ms) + 50ms;
+    }
+}
+
+
+.p-wave-ui {
+    margin-top: auto;
+    color: $white;
+    text-align: center;
+    max-width: 400px;
+    #p-wave-ui__title {
+        @include font-size--body-lg;
+        margin: 0 0 0.2em;
+    }
+}
+
+
+@-webkit-keyframes wave {
+    0% {
+        bottom: 0;
+    }
+
+    50% {
+        bottom: 100%;
+    }
+}
+
+@keyframes wave {
+    0% {
+        bottom: 0;
+    }
+
+    50% {
+        bottom: 100%;
+    }
+}
