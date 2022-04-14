@@ -17,7 +17,7 @@ console.log(makeid(20));
 
 // Get random word
 const nameplate = document.getElementById("nameplate")
-fetch('https://random-word-api.herokuapp.com/word?number=1&swear=0')
+fetch('https://random-word-api.herokuapp.com/word?number=1')
   .then(res => res.json()) // the .json() method parses the JSON response into a JS object literal
   .then(data => nameplate.innerHTML = data);
   
