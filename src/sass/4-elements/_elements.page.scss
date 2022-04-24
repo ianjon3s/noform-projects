@@ -20,7 +20,8 @@ html {
 body {
     background: $white;
     overflow-y: scroll;
-    &.state--dark-bg {
+    &.state--dark-bg,
+    &#state--dark-bg {
         background: $black;
     }
 }

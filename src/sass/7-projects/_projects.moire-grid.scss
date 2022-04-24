@@ -1,0 +1,161 @@
+/* ==========================================================================
+   #MOIRE
+   ========================================================================== */
+
+:root {
+    --moire-rotation-1: 0deg;
+    --moire-rotation-2: 0deg;
+    --moire-rotation-3: 0deg;
+    --moire-rotation-4: 0deg;
+    --moire-rotation-5: 0deg;
+    --moire-rotation-6: 0deg;
+}
+
+.p-moire-grid {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #171717;
+
+    .p-moire-grid__wrap {
+        width: 100%;
+        max-width: 500px;
+        position: relative;
+        height: 100%;
+        padding: 25px 25px 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .p-moire-grid__grid {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        width: 1px;
+        height: 1px;
+    }
+
+    .p-moire-grid__img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 800px;
+        height: 800px;
+        max-width: 90vw;
+        max-height: 75vh;
+        transform: translate(-50%, -53%);
+        img {
+            width: 100%;
+            max-width: 900px;
+            max-height: 100%;
+            height: auto;
+        }
+        &:nth-child(2) img {
+            transform: rotate(var(--moire-rotation-1));
+        }
+        &:nth-child(3) img {
+            transform: rotate(var(--moire-rotation-2));
+        }
+        &:nth-child(4) img {
+            transform: rotate(var(--moire-rotation-3));
+        }
+        &:nth-child(5) img {
+            transform: rotate(var(--moire-rotation-4));
+        }
+        &:nth-child(6) img {
+            transform: rotate(var(--moire-rotation-5));
+        }
+        &:nth-child(7) img {
+            transform: rotate(var(--moire-rotation-6));
+        }
+    }
+
+}
+
+.p-moire-grid-ui {
+    margin-top: auto;
+    color: $white;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    #p-moire-grid-ui__title {
+        @include font-size--body-lg;
+        margin: 0 0 0.2em;
+    }
+}
+
+
+input[type=range] {
+    -webkit-appearance: none;
+    margin: 20px 0;
+    width: 100%;
+}
+input[type=range]:focus {
+    outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 4px;
+    cursor: pointer;
+    background: $highlight;
+    border-radius: 25px;
+}
+input[type=range]::-webkit-slider-thumb {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 0 4px 0 rgba(0,0,0, 1);
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -8px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: $highlight;
+}
+.range-wrap{
+    width: 100%;
+    position: relative;
+    margin-top: 30px;
+}
+.range-value{
+    position: absolute;
+    top: -50%;
+}
+.range-value span{
+    width: 30px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    background: $link;
+    color: $white;
+    font-size: 12px;
+    font-weight: 700;
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border-radius: 6px;
+    user-select: none;
+}
+.range-value span:before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 10px solid $link;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    margin-top: -1px;
+}
