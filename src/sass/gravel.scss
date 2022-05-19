@@ -1,0 +1,9 @@
+//
+// Settings ---- Sass vars, etc.
+@import "1-settings/settings.global";            //  The global settings file contains any project-wide variables; things that need to be made available to the entire codebase.
+@import "1-settings/settings.colours";           //  Project colour settings
+
+@import "2-tools/tools.fonts";                   //  Mixins loading font styles and weights
+@import "2-tools/tools.mixins";                  //  Custom project-specific mixins
+
+@import "7-projects/projects.gravel";
