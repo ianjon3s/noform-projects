@@ -4,7 +4,7 @@
 
 
 
-.p-gravel {
+.p-molnar {
     position: fixed;
     top: 0;
     left: 0;
@@ -14,14 +14,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: $black;
+    background: #FAF6F1;
 
-    .p-gravel__wrap {
-        width: 1000px;
-        max-width: 150vw;
+    .p-molnar__wrap {
+        width: 500px;
+        max-width: 90vw;
         position: relative;
-        height: 500px;
-        max-height: 75vw;
         padding: 25px 25px 15px;
         display: flex;
         flex-wrap: wrap;
@@ -30,17 +28,12 @@
         justify-content: center;
         transform: translateY(-15%);
 
-        .row {
-            display: flex;
-            flex-wrap: nowrap;
-            flex-direction: row;
-            width: 100%;
-        }
-        .row div {
-            width: 2.5%;
+        & > div {
+            width: 33.3333%;
             height: 0;
-            padding-bottom: calc(2.5% + 2px);
+            padding-bottom: 33.3333%;
             position: relative;
+            mix-blend-mode: multiply;
             span {
                 position: absolute;
                 left: 0;
@@ -49,58 +42,49 @@
                 height: 100%;
             }
             span > span > span {
-                border: 1px solid $white;
-               
+                background: #C6292C;
             }
         }
     }
 }
 
-$row: 1;
-@while $row < 21 {
-    .row--#{$row} {
-        span > span > span {
-            background: lighten($black, ($row * 0.5));
-        }
+$i: 1;
+@while $i < 13 {
+    .m-translateX--#{$i} > span > span {
+        transform: translateX(#{$i * 3%});
     }
-    $i: 1;
-    @while $i < 13 {
-        .row--#{$row} {
-            .rotate--#{$i} > span {
-                transform: rotate(#{$i * ($row / 3)}deg);
-            }
-            .translateX--#{$i} > span > span {
-                transform: translateX(#{$i * 1% * (($row * $row) / 40)});
-            }
-            .translateY--#{$i} > span > span > span {
-                transform: translateY(#{$i * 1% * (($row * $row) / 40)});
-            }
-        }
-        $i: $i + 1;
+    .m-translateY--#{$i} > span {
+        transform: translateY(#{$i * 3%});
     }
-    $row: $row + 1;
+    $i: $i + 1;
 }
 
+$r: 1;
+@while $r < 31 {
+    .m-rotate--#{$r} > span > span > span {
+        transform: rotate(#{$r * 1.5}deg);
+    }
+    $r: $r + 1;
+}
 
-.row div.flipX--1.flipY--0 {
+.p-molnar__wrap > div.m-flipX--1.m-flipY--0 {
     transform: scaleX(-1);
 }
-.row div.flipX--1.flipY--1 {
+.p-molnar__wrap > div.m-flipX--1.m-flipY--1 {
     transform: scaleX(-1) scaleY(-1);
 }
-.row div.flipX--0.flipY--1 {
+.p-molnar__wrap > div.m-flipX--0.m-flipY--1 {
     transform: scaleY(-1);
 }
 
 
 
-
-.p-gravel__info {
+.p-molnar__info {
     position: fixed;
     bottom: 4%;
     left: 0;
     width: 100%;
-    color: $white;
+    color: $black;
     z-index: 15;
     text-align: center;
     padding: 0 1em;

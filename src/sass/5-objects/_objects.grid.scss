@@ -8,6 +8,9 @@
     grid-template-columns: repeat(12, [col] 1fr);
     grid-template-rows: repeat(1, [row] auto);
     grid-column-gap: 1rem;
+    @include mq($from: mobile--wide){
+        grid-column-gap: 1.25rem;
+    }
     @include mq($from: desktop){
         grid-column-gap: 2rem;
     }
@@ -21,14 +24,28 @@
 }
 
 .o-grid-col--card {
+    @include mq($until: tablet){
     grid-column-end: span 6;
-    &:nth-child(odd) {
-        grid-column-start: col 1;
-    }
-    &:nth-child(even) {
-        grid-column-start: col 7;
+        &:nth-child(odd) {
+            grid-column-start: col 1;
+        }
+        &:nth-child(even) {
+            grid-column-start: col 7;
+        }
     }
     @include mq($from: tablet){
+        grid-column-end: span 4;
+        &:nth-child(3n+1) {
+            grid-column-start: col 1;
+        }
+        &:nth-child(3n+2) {
+            grid-column-start: col 5;
+        }
+        &:nth-child(3n+3) {
+            grid-column-start: col 9;
+        }
+    }
+    @include mq($from: wide){
         grid-column-end: span 3;
         &:nth-child(4n+1) {
             grid-column-start: col 1;
