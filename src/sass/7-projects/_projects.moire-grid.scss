@@ -9,6 +9,18 @@
     --moire-rotation-4: 0deg;
     --moire-rotation-5: 0deg;
     --moire-rotation-6: 0deg;
+    --moire-rotation-7: 0deg;
+    --moire-rotation-8: 0deg;
+    --moire-rotation-9: 0deg;
+    --moire-rotation-10: 0deg;
+    --moire-rotation-11: 0deg;
+    --moire-rotation-12: 0deg;
+    --moire-rotation-13: 0deg;
+    --moire-rotation-14: 0deg;
+    --moire-rotation-15: 0deg;
+    --moire-rotation-16: 0deg;
+    --moire-rotation-17: 0deg;
+    --moire-rotation-18: 0deg;
 }
 
 .p-moire-grid {
@@ -76,6 +88,96 @@
         &:nth-child(7) img {
             transform: rotate(var(--moire-rotation-6));
         }
+        &:nth-child(8) img {
+            transform: rotate(var(--moire-rotation-7));
+        }
+        &:nth-child(9) img {
+            transform: rotate(var(--moire-rotation-8));
+        }
+        &:nth-child(10) img {
+            transform: rotate(var(--moire-rotation-9));
+        }
+        &:nth-child(11) img {
+            transform: rotate(var(--moire-rotation-10));
+        }
+        &:nth-child(12) img {
+            transform: rotate(var(--moire-rotation-11));
+        }
+        &:nth-child(13) img {
+            transform: rotate(var(--moire-rotation-12));
+        }
+        &:nth-child(14) img {
+            transform: rotate(var(--moire-rotation-13));
+        }
+        &:nth-child(15) img {
+            transform: rotate(var(--moire-rotation-14));
+        }
+        &:nth-child(16) img {
+            transform: rotate(var(--moire-rotation-15));
+        }
+        &:nth-child(17) img {
+            transform: rotate(var(--moire-rotation-16));
+        }
+        &:nth-child(18) img {
+            transform: rotate(var(--moire-rotation-17));
+        }
+        &:nth-child(19) img {
+            transform: rotate(var(--moire-rotation-18));
+        }
+        &:nth-child(20) img {
+            transform: rotate(var(--moire-rotation-19));
+        }
+        &:nth-child(21) img {
+            transform: rotate(var(--moire-rotation-20));
+        }
+        &:nth-child(22) img {
+            transform: rotate(var(--moire-rotation-21));
+        }
+        &:nth-child(23) img {
+            transform: rotate(var(--moire-rotation-22));
+        }
+        &:nth-child(24) img {
+            transform: rotate(var(--moire-rotation-23));
+        }
+        &:nth-child(25) img {
+            transform: rotate(var(--moire-rotation-24));
+        }
+        &:nth-child(26) img {
+            transform: rotate(var(--moire-rotation-25));
+        }
+        &:nth-child(27) img {
+            transform: rotate(var(--moire-rotation-26));
+        }
+        &:nth-child(28) img {
+            transform: rotate(var(--moire-rotation-27));
+        }
+        &:nth-child(29) img {
+            transform: rotate(var(--moire-rotation-28));
+        }
+        &:nth-child(30) img {
+            transform: rotate(var(--moire-rotation-29));
+        }
+        &:nth-child(31) img {
+            transform: rotate(var(--moire-rotation-30));
+        }
+        &:nth-child(32) img {
+            transform: rotate(var(--moire-rotation-31));
+        }
+        &:nth-child(33) img {
+            transform: rotate(var(--moire-rotation-32));
+        }
+        &:nth-child(34) img {
+            transform: rotate(var(--moire-rotation-33));
+        }
+        &:nth-child(35) img {
+            transform: rotate(var(--moire-rotation-34));
+        }
+        &:nth-child(36) img {
+            transform: rotate(var(--moire-rotation-35));
+        }
+        &:nth-child(37) img {
+            transform: rotate(var(--moire-rotation-36));
+        }
     }
 
 }
@@ -95,7 +197,7 @@
 
 input[type=range] {
     -webkit-appearance: none;
-    margin: 20px 0;
+    margin: 20px 0 30px;
     width: 100%;
 }
 input[type=range]:focus {
@@ -122,7 +224,8 @@ input[type=range]:focus::-webkit-slider-runnable-track {
     background: $highlight;
 }
 .range-wrap{
-    width: 100%;
+    width: 80%;
+    left: 10%;
     position: relative;
     margin-top: 30px;
 }
