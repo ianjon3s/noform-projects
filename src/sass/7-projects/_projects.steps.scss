@@ -1,0 +1,104 @@
+/* ==========================================================================
+   #STEPS ILLUSION
+   ========================================================================== */
+
+.p-steps {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #171717;
+
+    .p-steps__wrap {
+        width: 100%;
+        max-width: 900px;
+        position: relative;
+        height: 100%;
+        padding: 25px 25px 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
+.p-step-grid {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 66.6667%;
+    margin-top: auto;
+
+    .p-step-grid__wrap {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        #steps[data-contrast-level="high-contrast"] & {
+            background: transparent;
+        }
+        #steps[data-contrast-level="low-contrast"] & {
+            background: #606060;
+        }
+    }
+}
+
+.p-step-line {
+    width: 2.5%;
+    background-color: #F1F0E5;
+    #steps[data-contrast-level="high-contrast"] & {
+        background: #F1F0E5;
+    }
+    #steps[data-contrast-level="low-contrast"] & {
+        background: #919083;
+    }
+}
+
+.p-step-node {
+    position: absolute;
+    background: white;
+    width: 10%;
+    height: 5%;
+    left: 0;
+    -webkit-animation: step 30s linear infinite;
+        animation: step 30s linear infinite;
+    &--light {
+        background: #F1F127;
+        top: 36%;
+    }
+    &--dark {
+        background: #031749;
+        top: 60%;
+    }
+}
+
+
+@-webkit-keyframes step {
+    0% {
+        left: 0;
+    }
+
+    50% {
+        left: 90%;
+    }
+}
+
+@keyframes step {
+    0% {
+        left: 0;
+    }
+
+    50% {
+        left: 90%;
+    }
+}
