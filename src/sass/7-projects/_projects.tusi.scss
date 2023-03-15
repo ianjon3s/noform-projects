@@ -57,9 +57,13 @@
     margin-top: auto;
     color: $white;
     text-align: center;
-    #p-tusi-ui__title {
+    #p-tusi-ui__title,
+    .p-tusi-ui__title {
         @include font-size--body-lg;
         margin: 0 0 0.2em;
+    }
+    fieldset + fieldset{
+        margin-top: 0.5em;
     }
 }
 
