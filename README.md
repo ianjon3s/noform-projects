@@ -8,7 +8,7 @@ Written with HTML, Sass and JS/jQuery (sorry not sorry). Deployed with FTP.
 
 #### Dependencies
 
-- [Yarn] (https://classic.yarnpkg.com/)
+- [Yarn](https://classic.yarnpkg.com/)
 
 #### Setup
 
