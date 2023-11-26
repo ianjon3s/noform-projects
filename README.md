@@ -13,3 +13,5 @@ Written with HTML, Sass and JS/jQuery (sorry not sorry). Deployed with FTP.
 #### Setup
 
 Run `yarn install` to get the sauce flowing.
+
+Test
